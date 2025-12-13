@@ -100,7 +100,7 @@ export default function Register() {
         <div className="bg-white rounded-xl shadow-md p-6 md:p-10">
           <div className="mb-4">
             <h2 className="text-2xl font-semibold text-gray-800">Tạo tài khoản mới</h2>
-            <p className="text-sm text-gray-500">Nhanh chóng và miễn phí — dành cho demo</p>
+            {/* <p className="text-sm text-gray-500">Nhanh chóng và miễn phí — dành cho demo</p> */}
           </div>
 
           {error && (
@@ -127,7 +127,7 @@ export default function Register() {
                   <input className="input pr-12" type={showPassword ? 'text' : 'password'} value={password} onChange={e => setPassword(e.target.value)} placeholder="Mật khẩu" />
                   <button type="button" onClick={() => setShowPassword(s => !s)} className="absolute right-2 top-2 text-sm text-gray-500 px-2 py-1 rounded">{showPassword ? 'Ẩn' : 'Hiện'}</button>
                 </div>
-                <div className="text-xs text-gray-400 mt-1">Mật khẩu tối thiểu 4 ký tự (demo)</div>
+                <div className="text-xs text-gray-400 mt-1">Mật khẩu tối thiểu 4 ký tự</div>
               </div>
 
               <div>
@@ -169,7 +169,7 @@ export default function Register() {
             <div className="flex-1 h-px bg-gray-100"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button onClick={() => socialRegister('Google')} className="flex items-center gap-2 justify-center border border-gray-200 rounded-md px-3 py-2 hover:bg-gray-50">
               <svg className="w-4 h-4" viewBox="0 0 533.5 544.3"><path fill="#4285F4" d="M533.5 278.4c0-17.8-1.6-35..."/></svg>
               <span className="text-sm">Đăng ký với Google</span>
@@ -178,7 +178,7 @@ export default function Register() {
               <svg className="w-4 h-4" viewBox="0 0 24 24"><path fill="#1877F2" d="M22 12a10 10 0 10-11.5 9.9v-7..."/></svg>
               <span className="text-sm">Đăng ký với Facebook</span>
             </button>
-          </div>
+          </div> */}
 
           <div className="mt-4 text-center text-sm text-gray-500">
             Đã có tài khoản? <Link to="/login" className="text-primary font-medium hover:underline">Đăng nhập</Link>

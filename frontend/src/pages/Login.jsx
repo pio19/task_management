@@ -161,14 +161,14 @@ export default function Login() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <button onClick={() => socialLoginHandler('Google')} className="flex items-center gap-2 justify-center border border-gray-200 rounded-md px-3 py-2 hover:bg-gray-50">
+            {/* <button onClick={() => socialLoginHandler('Google')} className="flex items-center gap-2 justify-center border border-gray-200 rounded-md px-3 py-2 hover:bg-gray-50">
               <svg className="w-4 h-4" viewBox="0 0 533.5 544.3"><path fill="#4285F4" d="M533.5 278.4c0-17.8-1.6-35..."/></svg>
               <span className="text-sm">Tiếp tục với Google</span>
             </button>
             <button onClick={() => socialLoginHandler('Facebook')} className="flex items-center gap-2 justify-center border border-gray-200 rounded-md px-3 py-2 hover:bg-gray-50">
               <svg className="w-4 h-4" viewBox="0 0 24 24"><path fill="#1877F2" d="M22 12a10 10 0 10-11.5 9.9v-7..."/></svg>
               <span className="text-sm">Tiếp tục với Facebook</span>
-            </button>
+            </button> */}
           </div>
 
           <div className="mt-4 text-center text-sm text-gray-500">

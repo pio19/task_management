@@ -1,12 +1,63 @@
 {
   "users": [
-    { "id": 1, "name": "Nguyễn Văn A", "email": "leader@example.com", "role": "leader", "password": "demo123", "avatar_url": "" },
-    { "id": 2, "name": "Trần Thị B", "email": "member1@example.com", "role": "student", "password": "demo123", "avatar_url": "" },
-    { "id": 3, "name": "Lê Văn C", "email": "member2@example.com", "role": "student", "password": "demo123", "avatar_url": "" },
-    { "id": 4, "name": "GV Hướng Dẫn", "email": "supervisor@example.com", "role": "supervisor", "password": "demo123", "avatar_url": "" }
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "email": "leader@example.com",
+      "role": "leader",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị B",
+      "email": "member1@example.com",
+      "role": "student",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn C",
+      "email": "member2@example.com",
+      "role": "student",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 4,
+      "name": "GV Hướng Dẫn",
+      "email": "supervisor@example.com",
+      "role": "supervisor",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 5,
+      "name": "Phạm Thị D",
+      "email": "member3@example.com",
+      "role": "student",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 6,
+      "name": "Ngô Văn E",
+      "email": "member4@example.com",
+      "role": "student",
+      "password": "demo123",
+      "avatar_url": ""
+    },
+    {
+      "id": 7,
+      "name": "GV Phản Biện",
+      "email": "reviewer@example.com",
+      "role": "supervisor",
+      "password": "demo123",
+      "avatar_url": ""
+    }
   ],
-  "password_resets": [
-  ],
+  "password_resets": [],
   "projects": [
     {
       "id": 1,
@@ -21,6 +72,34 @@
       "course": "Kỹ thuật phần mềm",
       "status": "active",
       "created_at": "2025-11-01T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Đồ án Phát triển Web",
+      "description": "Xây dựng ứng dụng web React + Laravel",
+      "leader_id": 2,
+      "member_ids": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "course": "Lập trình Web",
+      "status": "active",
+      "created_at": "2025-11-15T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Đồ án Cơ sở dữ liệu",
+      "description": "Thiết kế và triển khai hệ thống CSDL",
+      "leader_id": 3,
+      "member_ids": [
+        3,
+        5
+      ],
+      "course": "Cơ sở dữ liệu",
+      "status": "completed",
+      "created_at": "2025-10-01T08:00:00Z"
     }
   ],
   "tasks": [
@@ -61,7 +140,7 @@
       "assignee_ids": [
         3
       ],
-      "status": "todo",
+      "status": "in_progress",
       "priority": "medium",
       "tags": [
         "frontend",
@@ -105,9 +184,64 @@
       "assignee_ids": [
         2
       ],
-      "status": "todo",
+      "status": "done",
       "version": 1,
       "created_at": "2025-12-12T09:32:59.777Z"
+    },
+    {
+      "id": 201,
+      "title": "Thiết kế wireframe",
+      "description": "Vẽ wireframe cho các màn hình chính",
+      "project_id": 2,
+      "creator_id": 2,
+      "assignee_ids": [
+        5
+      ],
+      "status": "todo",
+      "priority": "medium",
+      "tags": [
+        "ui",
+        "design"
+      ],
+      "due_date": "2025-12-18T23:59:00Z",
+      "attachments": [],
+      "comments_count": 0,
+      "subtasks": [],
+      "version": 1,
+      "created_at": "2025-11-16T09:30:00Z"
+    },
+    {
+      "id": 202,
+      "title": "Xây dựng API Task",
+      "description": "CRUD task bằng Laravel",
+      "project_id": 2,
+      "creator_id": 2,
+      "assignee_ids": [
+        6
+      ],
+      "status": "in_progress",
+      "priority": "high",
+      "tags": [
+        "backend",
+        "api"
+      ],
+      "due_date": "2025-12-22T23:59:00Z",
+      "attachments": [],
+      "comments_count": 1,
+      "subtasks": [
+        {
+          "id": "s21",
+          "title": "POST /tasks",
+          "is_done": true
+        },
+        {
+          "id": "s22",
+          "title": "PUT /tasks/{id}",
+          "is_done": false
+        }
+      ],
+      "version": 1,
+      "created_at": "2025-11-17T10:00:00Z"
     }
   ],
   "comments": [
@@ -131,6 +265,20 @@
       "author_id": 2,
       "content": "Bản nháp đã xong, xin góp ý.",
       "created_at": "2025-11-13T10:00:00Z"
+    },
+    {
+      "id": 1004,
+      "task_id": 201,
+      "author_id": 5,
+      "content": "Mình sẽ gửi wireframe Figma tối nay.",
+      "created_at": "2025-11-16T14:00:00Z"
+    },
+    {
+      "id": 1005,
+      "task_id": 202,
+      "author_id": 2,
+      "content": "Ưu tiên validate dữ liệu.",
+      "created_at": "2025-11-17T11:30:00Z"
     }
   ],
   "attachments": [],
@@ -146,6 +294,18 @@
       },
       "is_read": true,
       "created_at": "2025-11-10T10:01:00Z"
+    },
+    {
+      "id": 5002,
+      "user_id": 5,
+      "type": "comment",
+      "title": "Có bình luận mới",
+      "body": "Leader đã bình luận vào task của bạn",
+      "payload": {
+        "task_id": 201
+      },
+      "is_read": false,
+      "created_at": "2025-11-16T14:05:00Z"
     }
   ],
   "invites": [
@@ -170,6 +330,17 @@
         "title": "Thiết kế ERD"
       },
       "created_at": "2025-11-10T10:02:00Z"
+    },
+    {
+      "id": 9002,
+      "actor_id": 2,
+      "action_type": "update_task",
+      "target_type": "task",
+      "target_id": 202,
+      "payload": {
+        "status": "in_progress"
+      },
+      "created_at": "2025-11-17T10:30:00Z"
     }
   ]
 }
