@@ -1,0 +1,175 @@
+{
+  "users": [
+    { "id": 1, "name": "Nguyễn Văn A", "email": "leader@example.com", "role": "leader", "password": "demo123", "avatar_url": "" },
+    { "id": 2, "name": "Trần Thị B", "email": "member1@example.com", "role": "student", "password": "demo123", "avatar_url": "" },
+    { "id": 3, "name": "Lê Văn C", "email": "member2@example.com", "role": "student", "password": "demo123", "avatar_url": "" },
+    { "id": 4, "name": "GV Hướng Dẫn", "email": "supervisor@example.com", "role": "supervisor", "password": "demo123", "avatar_url": "" }
+  ],
+  "password_resets": [
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Đồ án Hệ thống Thông tin",
+      "description": "Phát triển phần mềm quản lý công việc nhóm cho sinh viên",
+      "leader_id": 1,
+      "member_ids": [
+        1,
+        2,
+        3
+      ],
+      "course": "Kỹ thuật phần mềm",
+      "status": "active",
+      "created_at": "2025-11-01T08:00:00Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 101,
+      "title": "Thiết kế ERD",
+      "description": "Thiết kế cơ sở dữ liệu (ERD) cho module user và task.",
+      "project_id": 1,
+      "creator_id": 1,
+      "assignee_ids": [
+        2
+      ],
+      "status": "in_progress",
+      "priority": "high",
+      "tags": [
+        "database",
+        "design"
+      ],
+      "due_date": "2025-12-15T23:59:00Z",
+      "attachments": [],
+      "comments_count": 0,
+      "subtasks": [
+        {
+          "id": "s1",
+          "title": "ERD entity user",
+          "is_done": false
+        }
+      ],
+      "version": 1,
+      "created_at": "2025-11-10T10:00:00Z"
+    },
+    {
+      "id": 102,
+      "title": "Giao diện Kanban",
+      "description": "Thiết kế mockup giao diện Kanban cho demo.",
+      "project_id": 1,
+      "creator_id": 1,
+      "assignee_ids": [
+        3
+      ],
+      "status": "todo",
+      "priority": "medium",
+      "tags": [
+        "frontend",
+        "ui"
+      ],
+      "due_date": "2025-12-10T23:59:00Z",
+      "attachments": [],
+      "comments_count": 2,
+      "subtasks": [],
+      "version": 1,
+      "created_at": "2025-11-09T09:30:00Z"
+    },
+    {
+      "id": 103,
+      "title": "Viết báo cáo",
+      "description": "Hoàn thiện báo cáo và nộp cho giảng viên.",
+      "project_id": 1,
+      "creator_id": 1,
+      "assignee_ids": [
+        2,
+        3
+      ],
+      "status": "done",
+      "priority": "low",
+      "tags": [
+        "report"
+      ],
+      "due_date": "2025-12-20T23:59:00Z",
+      "attachments": [],
+      "comments_count": 1,
+      "subtasks": [],
+      "version": 1,
+      "created_at": "2025-11-12T08:00:00Z"
+    },
+    {
+      "id": 11522,
+      "title": "Viết biểu đồ phân cấp chức năng",
+      "description": "Viết biểu đồ phân cấp chức năng",
+      "project_id": 1,
+      "priority": "medium",
+      "assignee_ids": [
+        2
+      ],
+      "status": "todo",
+      "version": 1,
+      "created_at": "2025-12-12T09:32:59.777Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1001,
+      "task_id": 102,
+      "author_id": 3,
+      "content": "Đã bắt đầu code phần drag & drop.",
+      "created_at": "2025-11-11T14:30:00Z"
+    },
+    {
+      "id": 1002,
+      "task_id": 102,
+      "author_id": 1,
+      "content": "Nhớ test responsive.",
+      "created_at": "2025-11-11T15:05:00Z"
+    },
+    {
+      "id": 1003,
+      "task_id": 103,
+      "author_id": 2,
+      "content": "Bản nháp đã xong, xin góp ý.",
+      "created_at": "2025-11-13T10:00:00Z"
+    }
+  ],
+  "attachments": [],
+  "notifications": [
+    {
+      "id": 5001,
+      "user_id": 2,
+      "type": "assigned",
+      "title": "Bạn được giao nhiệm vụ",
+      "body": "Bạn được giao task Thiết kế ERD",
+      "payload": {
+        "task_id": 101
+      },
+      "is_read": true,
+      "created_at": "2025-11-10T10:01:00Z"
+    }
+  ],
+  "invites": [
+    {
+      "id": 7001,
+      "email": "newmember@uni.edu",
+      "project_id": 1,
+      "token": "inv-token-abc",
+      "role": "member",
+      "expires_at": "2025-12-01T00:00:00Z",
+      "created_at": "2025-11-01T09:00:00Z"
+    }
+  ],
+  "activity_logs": [
+    {
+      "id": 9001,
+      "actor_id": 1,
+      "action_type": "create_task",
+      "target_type": "task",
+      "target_id": 101,
+      "payload": {
+        "title": "Thiết kế ERD"
+      },
+      "created_at": "2025-11-10T10:02:00Z"
+    }
+  ]
+}

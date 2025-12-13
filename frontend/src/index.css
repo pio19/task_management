@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component utilities */
+@layer components {
+  .app-shell {
+    @apply min-h-screen bg-neutral-100;
+  }
+  .container {
+    @apply max-w-6xl mx-auto px-4 py-6;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-4;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 bg-primary text-white px-3 py-2 rounded-md shadow-sm hover:brightness-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50;
+  }
+  .btn-muted {
+    @apply inline-flex items-center gap-2 bg-gray-200 text-gray-800 px-3 py-2 rounded-md;
+  }
+  .input {
+    @apply w-full px-3 py-2 border border-gray-200 rounded-md bg-white;
+  }
+  .kbadge {
+    @apply inline-flex items-center text-sm font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full;
+  }
+  .task-card {
+    @apply bg-white rounded-lg p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow;
+  }
+  .modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+  }
+  .modal-backdrop {
+    @apply absolute inset-0 bg-black/50;
+  }
+  .modal-panel {
+    @apply relative bg-white rounded-lg shadow-xl w-full max-w-3xl mx-4 p-6;
+  }
+}
+
+/* small responsive helpers */
+@media (max-width: 768px) {
+  .container { @apply px-3; }
+  .sidebar-hidden-sm { @apply hidden; }
+}
+
+/* --- Login-specific tweaks --- */
+.login-illustration svg { max-height: 160px; }
+@media (max-width: 768px) {
+  .login-illustration { display: none; }
+}
+
+/* simple spinner if needed */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin { animation: spin 1s linear infinite; }
